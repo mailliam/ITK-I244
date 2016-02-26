@@ -1,0 +1,45 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>II nädala ülesanne</title>
+    </head>
+    <body>
+        <form method="post" action="pr2_yl2.html">
+            <table border="1">
+                <tr>
+                    <th>Tutvustus</th>
+                    <td>
+                        <textarea name="tutvustus" placeholder="Kes Sa oled ja kust tuled?"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Millise nime all on paremini tuntud üksprill?</th>
+                    <td>
+                        <select name="viktoriin">
+                            <option value="1">Binokkel</option>
+                            <option value="2">Monokkel</option>
+                            <option value="3">Sokkel</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Millised järgnevatest on linnud?</th>
+                    <td>
+                        <select name="linnud[]" multiple>
+                            <option value="1">Koer</option>
+                            <option value="2">Naaskelnokk</option>
+                            <option value="3">Rootsiitsitaja</option>
+                            <option value="4">Lumeleopard</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Esita andmed</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
