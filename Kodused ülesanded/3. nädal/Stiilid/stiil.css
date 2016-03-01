@@ -1,0 +1,19 @@
+body {
+    background-color: orange;
+    color: #11AFCD;
+}
+
+h1 {
+    font-family: Arial, Sans-Serif;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+p {
+    font-family: Arial, Sans-Serif;
+    width:50%;
+    text-align: justify;
+}
+
+.esimene {
+    font-weight:bold;
+}
