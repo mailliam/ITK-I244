@@ -20,7 +20,7 @@ body {
 }
 
 .menyy ul li a {
-    color: lilac;
+    color: blue;
     text-decoration: none;
 }
 
@@ -46,10 +46,10 @@ th, td {
 }
 
 th {
-    background-color: #444444;
+    background-color: #C0C0C0;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="date"] {
     border: 1px dashed #333333;
     border-radius: 3px;
     padding: 5px 10px;
