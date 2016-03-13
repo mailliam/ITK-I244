@@ -6,13 +6,13 @@ body {
 #sisu {
     max-width: 1000px;
     min-width: 600px;
-    margin: auto;
+    margin-left: 20px;
 }
 
 .menyy {
     margin-bottom: 10px;
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 20px;
 }
 
@@ -69,17 +69,14 @@ input[type="text"], input[type="password"], input[type="date"] {
     width: 250px;
 }
 
+#piltTekstis {
+    float: right;
+}
+
 .footer {
     position: relative;
     left: 60px;
     top: 30px;
-}
-
-@media screen and (min-width: 700px) {
-    body {
-        font-size: 20px;
-        color: olive;
-    }
 }
 
 @media screen and (max-width: 700px) {

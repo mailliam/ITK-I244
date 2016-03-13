@@ -1,8 +1,8 @@
     <?php include("header.php") ?>
 
-        <?php include("menyy.php"); ?>
-
         <div id="sisu">
+            <?php include("menyy.php"); ?>
+
             <form method="post" action="vorm.php">
                 <input type="hidden" name="aeg" value="2016-02-23">
                 <table>
