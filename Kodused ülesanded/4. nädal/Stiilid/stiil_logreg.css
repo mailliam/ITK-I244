@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+}
+
+#sisu {
+    max-width: 1000px;
+    min-width: 600px;
+    margin: auto;
+}
+
+.menyy {
+    margin-bottom: 10px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.menyy ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menyy ul li {
+    background-color: #CCCCCC;
+    padding: 5px 10px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.menyy ul li a {
+    color: blue;
+    text-decoration: none;
+}
+
+.menyy ul li a:hover {
+    text-decoration: underline;
+}
+
+.menyy ul li.valitud {
+    background-color: #BBBBBB
+}
+
+.menyy ul li.valitud a {
+    color: white;
+}
+
+table {
+    border-spacing: 0;
+}
+
+th, td {
+    border-top: 1px solid #AAAAAA;
+    padding: 5px 10px;
+}
+
+th {
+    background-color: #3D4043;
+}
+
+input[type="text"], input[type="password"], input[type="date"] {
+    border: 1px dashed #333333;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    width: 250px;
+}
+
+.footer {
+    position: relative;
+    left: 60px;
+    top: 30px;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        font-size: 20px;
+        color: olive;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 10px;
+        color: blue;
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        background-color: #A8C5D9;
+    }
+}
+
+@media print {
+    body {
+        background-color: green;
+    }
+}
