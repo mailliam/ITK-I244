@@ -1,0 +1,71 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Stiilid/stiil.css">
+        <title> Galerii </title>
+    </head>
+
+    <body>
+        <form method="post" action="pr2_galerii.html" enctype="multipart/form-data">
+            <table>
+                <caption><strong>Lisa uus pilt</strong></caption>
+                <tr>
+                    <th>Pealkiri</th>
+                    <td>
+                        <input type="text" name="pealkiri">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Autor</th>
+                    <td>
+                        <input type="text" name="autor">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Suur pilt</th>
+                    <td>
+                        <input type="file" name="suur_pilt">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Pisipilt</th>
+                    <td>
+                        <input type="file" name="pisipilt">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Lae pilt üles</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <br>
+        <br>
+        <em>Juba olemasolevate piltide suuremalt vaatamiseks klõpsa pildile</em>
+        <p>
+            <a href="Pildilehed_infoga/kyylikud.html" target="suur_pilt"> <img src="Thumbs/th_kyylikud.jpg" alt="Istuvate küülikute pisipilt"> </a>
+            <a href="Pildilehed_infoga/lesib.html" target="suur_pilt"> <img src="Thumbs/th_lesib.jpg" alt="Lesiva küüliku pisipilt"> </a>
+            <a href="Pildilehed_infoga/lesib2.html" target="suur_pilt"> <img src="Thumbs/th_lesib2.jpg" alt="Lesiva küüliku pisipilt"> </a>
+            <a href="Pildilehed_infoga/söövad.html" target="suur_pilt"> <img src="Thumbs/th_söövad.jpg" alt="Söövate küülikute pisipilt"> </a>
+            <a href="Pildilehed_infoga/söövad2.html" target="suur_pilt"> <img src="Thumbs/th_söövad2.jpg" alt="Söövate küülikute pisipilt"> </a>
+        </p>
+        <br>
+        <p>
+            Teiste selle nädala tööde vaatamiseks klõpsa järgmistele linkidele:
+            <br>
+            <a href="pr2_log.html" target="suur_pilt">Sisselogimisvorm</a>
+            <br>
+            <a href="pr2_reg.html" target="suur_pilt">Registreerimisvorm</a>
+            <br>
+            <a href="pr2_yl1.html" target="suur_pilt">Get meetod ja tabelite joonistamine</a>
+            <br>
+            <a href="pr2_yl2.html" target="suur_pilt">Post meetod</a>
+        </p>
+        <p>
+            <iframe name="suur_pilt" width="1500" height="800"> </iframe>
+        </p>
+    </body>
+</html>
