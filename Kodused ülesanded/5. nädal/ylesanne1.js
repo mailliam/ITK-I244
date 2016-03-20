@@ -3,11 +3,12 @@ window.onload = function() {
     var sihtmark = document.getElementById('siht');
 
     sihtmark.onclick = function() {
-        var algneTop = sihtmark.offsetTop;
-        var algneLeft = sihtmark.offsetLeft;
-        var liikumine = Math.random()*100;
-            sihtmark.style.top=(algneTop+liikumine) + "px";
-            sihtmark.style.left=(algneLeft+liikumine) + "px";
-            alert(algneLeft);
+        //var algneTop = sihtmark.offsetTop;
+        //var algneLeft = sihtmark.offsetLeft;
+        var uusTop = Math.random()*500;
+        var uusLeft = Math.random()*500;
+            sihtmark.style.top=(uusTop) + "px";
+            sihtmark.style.left=(uusLeft) + "px";
+
     }
 }
