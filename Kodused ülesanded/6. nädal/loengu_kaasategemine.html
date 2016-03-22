@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery loengu kaasategemine</title>
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                //mida teha kui leht on laadunud
+                $("#list").css("color", "green");
+                $('.tekst').css({
+                    'color': 'red',
+                    'font-weight': 'bold',
+                    'font-size': '20px'
+                });
+
+                $(".tekst").first().css({
+                    "background-color": "skyblue"
+                });
+
+                $("#teine").next().css({
+                    "background-color": "skyblue"
+                })
+
+                $("#teine").prev().css({
+                    "background-color": "yellow"
+                })
+
+                $("p").get(3).innerHTML="Mina muutsin HTMLi kirjutatud teksti ära."
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <ul id="list">
+            <li>Punane</li>
+            <li id="teine">Kollane</li>
+            <li>Roheline</li>
+        </ul>
+        <p class="tekst">Siin on tekst</p>
+        <p>Siin on tekst</p>
+        <p class="tekst">Siin on tekst</p>
+        <p>Siin on tekst</p>
+        <p>Siin on tekst</p>
+    </body>
+</html>

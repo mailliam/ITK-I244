@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery loengu kaasategemine</title>
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("li").each(function () {
+                    $(this).css("background-color", $(this).html());
+                });
+
+                $("img").attr("src", "lesib.jpg");
+
+                $("img").click(function() {
+                    if($("img").attr("src")=="kyylikud.jpg") {
+                        $("img").attr("src", "lesib.jpg");
+                    } else {
+                        $("img").attr("src", "kyylikud.jpg");
+                    }
+                });
+
+                $("p").each(function() {
+                    if ($(this).hasClass("tekst")) {
+                        $(this).css("font-style", "italic");
+                    }
+                });
+
+                $("li").on({
+                    mouseenter: function () {
+                        $(this).css("background-color", "white");
+                    },
+                    mouseleave: function () {
+                        $(this).css("background-color", $(this).html() );
+                    },
+                    click: function () {
+                        $(this).css("color", "blue");
+                    }
+                });
+
+                $("p").click(function() {
+                    $(this).hide(1500); //Võtab 1,5 sekundit aega, et ära kaduda
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <ul id="list">
+            <li>Red</li>
+            <li id="teine">Yellow</li>
+            <li>Green</li>
+        </ul>
+
+        <p class="tekst">Siin on tekst 1</p>
+        <p>Siin on tekst 2</p>
+        <p class="tekst">Siin on tekst 3</p>
+        <p>Siin on tekst 4</p>
+        <p>Siin on tekst 5</p>
+
+        <button onclick="$('p').toggle(1500);">Vajuta mind</button>
+
+        <img src="kyylikud.jpg" alt="Pilt" height="100px">
+
+    </body>
+</html>
