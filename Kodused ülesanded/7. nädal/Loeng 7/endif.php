@@ -17,6 +17,6 @@
 
         <?php if($tingimus) { ?>
             <p>Mind kuvatakse siis kui tingimus kehtib</p>
-        <?php endif } ?>
+        <?php } ?>
     </body>
 </html>

@@ -2,7 +2,10 @@ body {
     background-color: #D4A76A;
 }
 
-p {
-    background-color: #EEEEEE;
+p.loom {
+    background-color: #11FF11;
     border: 2px solid grey;
+    border-radius: 4px;
+    width: 300px;
+    padding: 10px;
 }

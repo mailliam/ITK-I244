@@ -1,18 +1,4 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Loom</title>
-    <link rel="stylesheet" type="text/css" href="loom.css">
-</head>
-
-</body>
-<p> <?php echo $loom['nimi'];?> on <?php echo $loom['vanus']; ?> aastane.
-    Pilt on selline <img src = "<?php echo $loom['pilt']; ?>" alt="Küüliku pilt">
-
-</p>
-
-</body>
-
-</html>
+        <p class="loom"> <?php echo $loom['nimi'];?> on <?php echo $loom['vanus']; ?>-aastane.
+            <br>Värvuse nimetuseks on tal <?php echo $loom['värv'];?>.
+            <br>Pilt on selline: <img src = "<?php echo $loom['pilt']; ?>" alt="Küüliku pilt">
+        </p>
