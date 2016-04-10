@@ -12,28 +12,32 @@ $mode="vaikimisi";
 if (!empty($_GET['mode'])){
 	$mode=$_GET['mode'];
 }
-/*
-if ($mode == "galerii"){
-	include("galerii.html");
-} elseif ($mode == "login"){
-	include("login.html");
-}*/
+
 include_once("View/head.html");
+include_once("View/menyy.html");
 
 switch($mode){
+    case "avaleht":
+        include("View/avaleht.html");
+    break;
 	case "log":
 		include("View/log.html");
 	break;
 	case "reg":
 		include("View/reg.html");
 	break;
-	//default:
-		//include();
-	//break;
+    case "galerii":
+        include("View/galerii.html");
+    break;
+    case "lisamine":
+        include("View/pildilisamine.html");
+    break;
+    default:
+		include("View/avaleht.html");
+	break;
 }
 
-include_once("View/menyy.html");
-include("View/galerii.html");
+
 include_once("View/foot.html");
 
 ?>
