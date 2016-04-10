@@ -8,9 +8,32 @@ $pildid = array(
     array("big" => "Pildid/söövad2.jpg", "small" => "Thumbs/th_söövad2.jpg", "alt" => "Küülikud söövad ja ennustavad mingisuguse jalkamängu tulemust <br/>Üks halva kvaliteediga isetehtud pilt")
 );
 
+$mode="vaikimisi";
+if (!empty($_GET['mode'])){
+	$mode=$_GET['mode'];
+}
+/*
+if ($mode == "galerii"){
+	include("galerii.html");
+} elseif ($mode == "login"){
+	include("login.html");
+}*/
 include_once("View/head.html");
-include_once("menyy.php");
-include("View/pr2_galerii_javascript.html");
+
+switch($mode){
+	case "log":
+		include("View/log.html");
+	break;
+	case "reg":
+		include("View/reg.html");
+	break;
+	//default:
+		//include();
+	//break;
+}
+
+include_once("View/menyy.html");
+include("View/galerii.html");
 include_once("View/foot.html");
 
 ?>
