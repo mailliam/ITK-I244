@@ -6,7 +6,8 @@
                         <label for="username-id">Kasutajanimi</label>
                     </th>
                     <td>
-                        <input type = "text" name = "username" id="username-id" placeholder = "Kasutajanimi">
+                        <input type = "text" name = "username" id="username-id" placeholder = "Kasutajanimi"<?php if(!empty($_POST["username"]))
+                        echo "value=\"".htmlspecialchars($_POST["username"])."\"";?>/>
                     </td>
                 </tr>
                 <tr>
