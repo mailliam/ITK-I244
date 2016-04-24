@@ -1,0 +1,32 @@
+<div class="menyy">
+    <ul>
+        <li>
+            <a href="?mode=avaleht">Avaleht</a>
+        </li>
+        <li>
+            <a href="?mode=galerii">Galerii</a>
+        </li>
+        <li>
+            <a href="?mode=lisamine">Lisa pilt</a>
+        </li>
+        <li>
+            <a href="http://google.com" target="_blank">Google</a>
+        </li>
+        <li>
+            <a href="http://postimees.ee" target="_blank">Postimees</a>
+        </li>
+
+        <?php if(empty($_SESSION["sisselogitud"])): ?>
+        <li>
+            <a href="?mode=login">Sisselogimine</a>
+        </li>
+        <li>
+            <a href="?mode=reg">Registreerimine</a>
+        </li>
+        <?php else: ?>
+        <li>
+            <a href="?mode=logout">Logi välja</a>
+        </li>
+        <?php endif;?>
+    </ul>
+</div>
