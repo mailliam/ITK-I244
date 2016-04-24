@@ -36,6 +36,15 @@ switch($page){
     case "tulemus":
         include("tulemus.php");
     break;
+    
+    case "sessLopp":
+        $_SESSION = array();
+        if (isset($_COOKIE[session_name()])) {
+         setcookie(session_name(), '', time()-42000, '/');
+        }
+        session_destroy();
+
+    break;
     default:
 		include("pealeht.php");
 	break;

@@ -12,6 +12,12 @@
         }
 
     } else {
-        echo "Sa ei valinud ühtegi pilti.";
+        if (!empty($_SESSION["valitud"])) {
+            echo "Oled oma valiku juba teinud. Sinu valik oli pilt nr. ".$_SESSION["valitud"].".";?>            
+
+        <?php } else {
+            echo "Sa ei valinud ühtegi pilti.";
+        }
+
     }?>
 </p>

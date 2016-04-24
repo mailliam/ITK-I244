@@ -12,4 +12,3 @@
 	<br/>
 	<input type="submit" value="Valin!"/>
 </form>
-<p>Oled juba valiku teinud</p>
