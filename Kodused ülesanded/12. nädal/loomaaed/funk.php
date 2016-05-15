@@ -27,17 +27,17 @@ function kuva_puurid(){
 	// siia on vaja funktsionaalsust
     global $connection;
     $puurid = array();
-    $sql = "SELECT DISTINCT puur FROM mkeerus_loomaaed";
+
+    $sql = "SELECT DISTINCT puur FROM mkeerus_loomaaed ORDER BY puur ASC";
     $result = mysqli_query($connection, $sql) or die($sql . " - " . mysqli_error($connection));
-    while ($rida = mysqli_fetch_assoc($result)) {
-        $puurid[]=$rida;
-        $sql2 = "SELECT * FROM mkeerus_loomaaed WHERE puur='$puurid[$rida]'";
-        $result2 = mysqli_query($connection, $sql);
-        while($rida2 = mysqli_fetch_assoc($result2)) {
-             $puurid['puur'][]=$rida2;
+    while ($puur = mysqli_fetch_assoc($result)) {
+        $puurid[] = $puur;
+        $sql2 = "SELECT * FROM mkeerus_loomaaed WHERE puur=".$puur["puur"];
+        $result2 = mysqli_query($connection, $sql2) or die($sql2 . " - " . mysqli_error($connection));
+        while($loom=mysqli_fetch_assoc($result2)) {
+            $puurid[$puur["puur"]][] = $loom;
         }
     }
-
 
 	include_once('views/puurid.html');
 
