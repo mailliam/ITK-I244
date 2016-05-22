@@ -20,6 +20,20 @@ function pildid() {
         //array_push($pildid, $rida);
         $pildid[]=$rida;
     }
+    return $pildid;
+}
+
+function pildimuutmine($id) {
+    global $connection; //huvitav, miks ma uuesti pean selle siin kirjtama?
+    global $pilt;
+    $pilt = array();
+    $sql = "SELECT * FROM mkeerus_pildid2 WHERE id=$id";
+    $result = mysqli_query($connection, $sql) or die($sql . " - " . mysqli_error($connection));
+    while ($rida = mysqli_fetch_assoc($result)) {
+        //array_push($pildid, $rida);
+        $pildid[]=$rida;
+    }
+    return $pildid;
 
 }
 
@@ -56,7 +70,7 @@ function kuvaSisselogimine() {
         }
 
         if(!empty($_POST["password"])) {
-            if($_POST["username"]!="kasutaja") {
+            if($_POST["password"]!="parool") {
                 $errors[]="Kasutajanimi ja/või parool vale";
             }
         } else {
@@ -98,7 +112,7 @@ function kuvaRegistreerimine() {
 }
 
 function kuvaGalerii() {
-    global $pildid;
+    $pildid = pildid();
     include_once("View/head.html");
     include_once("View/menyy.html");
     include("View/galerii.html");
@@ -106,15 +120,18 @@ function kuvaGalerii() {
 }
 
 function kuvaPildiLisamine() {
-    $errorPuudubOigus=array();
+    //$errorPuudubOigus=array();
     if(!empty($_SESSION["sisselogitud"])) {
         include_once("View/head.html");
         include_once("View/menyy.html");
         include("View/pildilisamine.html");
         include_once("View/foot.html");
     } else {
-        $errorPuudubOigus[]="Pilte saavad lisada ainult sisselogitud kasutajad";
-        kuvaAvaleht();
+        $errorPuudubOigus="Pilte saavad lisada ainult sisselogitud kasutajad";
+        include_once("View/head.html");
+        include_once("View/menyy.html");
+        include("View/avaleht.html");
+        include_once("View/foot.html");
     }
 }
 

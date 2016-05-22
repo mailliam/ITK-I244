@@ -32,7 +32,7 @@ function kuva_puurid(){
     $result = mysqli_query($connection, $sql) or die($sql . " - " . mysqli_error($connection));
     while ($puur = mysqli_fetch_assoc($result)) {
         $puurid[] = $puur;
-        $sql2 = "SELECT * FROM mkeerus_loomaaed WHERE puur=".$puur["puur"];
+        $sql2 = "SELECT * FROM mkeerus_loomaaed WHERE puur=".$puur['puur'];
         $result2 = mysqli_query($connection, $sql2) or die($sql2 . " - " . mysqli_error($connection));
         while($loom=mysqli_fetch_assoc($result2)) {
             $puurid[$puur["puur"]][] = $loom;
