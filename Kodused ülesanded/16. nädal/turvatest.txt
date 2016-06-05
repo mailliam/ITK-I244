@@ -1,0 +1,11 @@
+Väga palju pole õnnestunud turvaauke leida.
+Üheski töös ei ole kaitset CSRF vastu.
+
+Valdavalt on kõikidel väljundid kaitstud htmlspecialcharsiga, sql päringudjh tehtud
+kas prepared statementide abil ja/või kasutades escape'i.
+
+Ühes töös on jäänud siiski üks koht, kus kuvatakse välja $_SESSION['user'], mille puhul on kasutaja sisend
+andmebaasi sisetamisel küll escape'tud, kuid selle väljakuvamisel mitte, st on võimalik nii html kui
+javascripti sisestada ja käivitada.
+
+Ühel tööl jäänud ka funktsioonide failid public kausta.

@@ -75,7 +75,7 @@
                         <?= htmlspecialchars($rida['Nimetus']); //lühem versioon php echost ?>
                     </td>
                     <td>
-                        <?= $rida['Kogus']; ?>
+                        <?= htmlspecialchars($rida['Kogus']); ?>
                     </td>
                     <td>
                         <form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>">

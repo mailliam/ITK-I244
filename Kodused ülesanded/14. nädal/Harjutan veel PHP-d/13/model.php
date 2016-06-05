@@ -81,7 +81,7 @@ function model_user_get($kasutajanimi, $parool) {
     mysqli_stmt_execute($stmt);
     mysqli_stmt_bind_result($stmt, $id, $hash); //Seome selectitud muutujad väljadega
     mysqli_stmt_fetch($stmt); //Võtab prep. stmt ja küsib järgmise rea (kui mitu, siis while'ga)
-    mysqli_stmt_close();
+    mysqli_stmt_close($stmt);
 
     if(password_verify($parool, $hash)) { //See funktsioon teeb hashi juppideks: etmis algoritm kasutatud jms.
         return $id;
